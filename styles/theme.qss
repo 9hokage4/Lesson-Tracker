@@ -35,10 +35,10 @@ QPushButton#primaryButton {
     color: #FFFFFF;
     border: none;
     border-radius: 10px;
-    padding: 15px 30px;  /* Увеличен padding для центрирования текста */
+    padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
-    min-height: 50px;  /* Увеличена высота */
+    min-height: 60px;  /* Увеличена высота */
 }
 
 QPushButton#primaryButton:hover {
@@ -298,15 +298,15 @@ QLabel#statusCancelled {
    КАРТОЧКА УЧЕНИКА
    ============================================ */
 
-StudentCard {
+#StudentCard {
     background-color: #FFFFFF;
     border: 2px solid #679FD2;  
     border-radius: 15px;
-    padding: 20px;  
-    margin: 5px;
+    padding: 25px;  
+    margin: 0px;
 }
 
-StudentCard:hover {
+#StudentCard:hover {
     border: 2px solid #0C5DA5;  
     background-color: #FAFBFF;
 }

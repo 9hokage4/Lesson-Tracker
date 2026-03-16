@@ -3,12 +3,12 @@ Kairos Tutor - Виджет карточки ученика
 """
 
 from PyQt6.QtWidgets import (
-    QWidget, QVBoxLayout, QLabel, QPushButton, QHBoxLayout
+    QFrame, QVBoxLayout, QLabel, QPushButton, QHBoxLayout
 )
 from PyQt6.QtCore import pyqtSignal, Qt
 
 
-class StudentCard(QWidget):
+class StudentCard(QFrame):
     """Карточка ученика для отображения в сетке"""
     
     clicked = pyqtSignal(int)  # Сигнал с ID ученика при клике
@@ -21,13 +21,19 @@ class StudentCard(QWidget):
         self._student_uuid = student_data['student_uuid']
         self._student_name = student_data['name']
         self._status = student_data['status']
+        self.setObjectName("StudentCard")
         
         self._setup_ui()
     
     def _setup_ui(self):
         """Настройка интерфейса карточки"""
         self.setObjectName("StudentCard")
-        self.setFixedSize(350, 200)
+        
+        self.setFrameShape(QFrame.Shape.StyledPanel)
+        self.setFrameShadow(QFrame.Shadow.Raised)
+        
+        self.setMinimumSize(350, 220)
+        self.setMaximumWidth(400)
         self.setCursor(Qt.CursorShape.PointingHandCursor)
         
         # Главный layout
