@@ -11,7 +11,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import pyqtSignal, Qt, QDate
 from PyQt6.QtGui import QFont
-
+from ui.widgets.progress_bar import CustomProgressBar
 from ui.lesson_dialog import LessonDialog
 
 
@@ -167,10 +167,10 @@ class StudentProfileDialog(QDialog):
         plan = self._db.get_study_plan(self._student['id'])
         completed, total = self._db.get_plan_progress(self._student['id'])
         
-        # Прогресс-бар
-        progress_label = QLabel(f"Прогресс: {completed}/{total} тем")
-        progress_label.setObjectName("textLabel")
-        layout.addWidget(progress_label)
+        # Прогресс-бар (кастомный)
+        self._progress_bar = CustomProgressBar()
+        self._progress_bar.set_progress(completed, total)
+        layout.addWidget(self._progress_bar)
         
         # Список тем
         self._plan_list = QListWidget()

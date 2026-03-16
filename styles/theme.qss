@@ -1,0 +1,848 @@
+/* ============================================
+   KAIROS TUTOR - СТИЛИ ПРИЛОЖЕНИЯ
+   Все цвета из палитры пользователя
+   ============================================ */
+
+/* ============================================
+   ГЛОБАЛЬНЫЕ СТИЛИ
+   ============================================ */
+
+QMainWindow {
+    background-color: #F5F7FA;
+}
+
+QWidget {
+    font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    color: #043A6B;
+}
+
+/* ============================================
+   ЦВЕТОВЫЕ КЛАССЫ (для справки)
+   ============================================ */
+/*
+   Основной (синий):   #0C5DA5, #26537C, #043A6B, #408DD2, #679FD2
+   Вторичный А (фио.): #1F1AB2, #333086, #0C0874, #534ED9, #7773D9
+   Вторичный B (зел.): #00AC6B, #20815D, #007046, #35D699, #60D6A9
+*/
+
+/* ============================================
+   КНОПКИ
+   ============================================ */
+
+QPushButton#primaryButton {
+    background-color: #0C5DA5;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;  /* Увеличен padding для центрирования текста */
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 50px;  /* Увеличена высота */
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #26537C;
+}
+
+QPushButton#primaryButton:pressed {
+    background-color: #043A6B;
+}
+
+QPushButton#primaryButton:disabled {
+    background-color: #679FD2;
+    color: #CCCCCC;
+}
+
+/* Кнопка успеха (зелёная) */
+QPushButton#successButton {
+    background-color: #00AC6B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 45px;
+}
+
+QPushButton#successButton:hover {
+    background-color: #20815D;
+}
+
+QPushButton#successButton:pressed {
+    background-color: #007046;
+}
+
+/* Кнопка предупреждения (оранжевая) */
+QPushButton#warningButton {
+    background-color: #F39C12;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 45px;
+}
+
+QPushButton#warningButton:hover {
+    background-color: #D68910;
+}
+
+QPushButton#warningButton:pressed {
+    background-color: #B9770E;
+}
+
+/* Кнопка опасности (красная) */
+QPushButton#dangerButton {
+    background-color: #E74C3C;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 45px;
+}
+
+QPushButton#dangerButton:hover {
+    background-color: #C0392B;
+}
+
+QPushButton#dangerButton:pressed {
+    background-color: #A93226;
+}
+
+/* Вторичная кнопка (фиолетовая) */
+QPushButton#secondaryButton {
+    background-color: #1F1AB2;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 45px;
+}
+
+QPushButton#secondaryButton:hover {
+    background-color: #333086;
+}
+
+QPushButton#secondaryButton:pressed {
+    background-color: #0C0874;
+}
+
+/* Обычная кнопка */
+QPushButton {
+    background-color: #408DD2;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    min-height: 40px;
+}
+
+QPushButton:hover {
+    background-color: #0C5DA5;
+}
+
+QPushButton:pressed {
+    background-color: #043A6B;
+}
+
+QPushButton:disabled {
+    background-color: #CCCCCC;
+    color: #999999;
+}
+
+/* ============================================
+   ПОЛЯ ВВОДА
+   ============================================ */
+
+QLineEdit {
+    background-color: #FFFFFF;
+    color: #043A6B;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    padding: 14px 15px;  /* Сбалансированный padding */
+    font-size: 14px;
+    min-height: 50px;
+    line-height: 22px;
+}
+
+QLineEdit:hover {
+    border: 2px solid #408DD2;
+}
+
+QLineEdit:focus {
+    border: 2px solid #0C5DA5;
+    background-color: #FAFBFF;
+}
+
+QLineEdit:disabled {
+    background-color: #F0F0F0;
+    color: #999999;
+}
+
+QLineEdit::placeholder {
+    color: #999999;
+}
+
+/* ============================================
+   ТЕКСТОВЫЕ ПОЛЯ (Многострочные)
+   ============================================ */
+
+QTextEdit, QPlainTextEdit {
+    background-color: #FFFFFF;
+    color: #043A6B;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 14px;
+    selection-background-color: #408DD2;
+    selection-color: #FFFFFF;
+}
+
+QTextEdit:hover, QPlainTextEdit:hover {
+    border: 2px solid #408DD2;
+}
+
+QTextEdit:focus, QPlainTextEdit:focus {
+    border: 2px solid #0C5DA5;
+    background-color: #FAFBFF;
+}
+
+QTextEdit:disabled, QPlainTextEdit:disabled {
+    background-color: #F0F0F0;
+    color: #999999;
+}
+
+/* ============================================
+   LABEL (МЕТКИ)
+   ============================================ */
+
+/* Заголовок */
+QLabel#titleLabel {
+    color: #043A6B;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Подзаголовок */
+QLabel#subtitleLabel {
+    color: #26537C;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Обычный текст */
+QLabel#textLabel {
+    color: #043A6B;
+    font-size: 14px;
+}
+
+/* Второстепенный текст */
+QLabel#secondaryLabel {
+    color: #679FD2;
+    font-size: 12px;
+}
+
+/* ID ученика */
+QLabel#studentId {
+    color: #043A6B;
+    font-size: 12px;
+    background-color: #679FD2;
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-weight: bold;
+}
+
+/* ============================================
+   СТАТУСЫ
+   ============================================ */
+
+/* Статус: Выполнено / Активен */
+QLabel#statusCompleted {
+    color: #007046;
+    background-color: #60D6A9;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+/* Статус: Перенесено / На паузе */
+QLabel#statusRescheduled {
+    color: #B7950B;
+    background-color: #F9E79F;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+/* Статус: Отменено / Архив */
+QLabel#statusCancelled {
+    color: #C0392B;
+    background-color: #FADBD8;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+/* ============================================
+   КАРТОЧКА УЧЕНИКА
+   ============================================ */
+
+StudentCard {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;  
+    border-radius: 15px;
+    padding: 20px;  
+    margin: 5px;
+}
+
+StudentCard:hover {
+    border: 2px solid #0C5DA5;  
+    background-color: #FAFBFF;
+}
+/* ============================================
+   ПРОГРЕСС-БАР
+   ============================================ */
+
+QProgressBar {
+    background-color: #7773D9;
+    border: none;
+    border-radius: 10px;
+    height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+QProgressBar::chunk {
+    background-color: #1F1AB2;
+    border-radius: 10px;
+}
+
+/* ============================================
+   СКРОЛЛБАР
+   ============================================ */
+
+/* Вертикальный скроллбар */
+QScrollBar:vertical {
+    background-color: #F5F7FA;
+    width: 12px;
+    border-radius: 6px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #679FD2;
+    border-radius: 6px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #0C5DA5;
+}
+
+QScrollBar::handle:vertical:pressed {
+    background-color: #043A6B;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Горизонтальный скроллбар */
+QScrollBar:horizontal {
+    background-color: #F5F7FA;
+    height: 12px;
+    border-radius: 6px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #679FD2;
+    border-radius: 6px;
+    min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #0C5DA5;
+}
+
+QScrollBar::handle:horizontal:pressed {
+    background-color: #043A6B;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* ============================================
+   ВЫПАДАЮЩИЕ СПИСКИ
+   ============================================ */
+
+QComboBox {
+    background-color: #FFFFFF;
+    color: #043A6B;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    min-height: 45px;
+}
+
+QComboBox:hover {
+    border: 2px solid #408DD2;
+}
+
+QComboBox:focus {
+    border: 2px solid #0C5DA5;
+}
+
+QComboBox:disabled {
+    background-color: #F0F0F0;
+    color: #999999;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #0C5DA5;
+    margin-right: 10px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    selection-background-color: #408DD2;
+    selection-color: #FFFFFF;
+    padding: 5px;
+}
+
+QComboBox QAbstractItemView::item {
+    min-height: 40px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #679FD2;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: #0C5DA5;
+}
+
+/* ============================================
+   КАЛЕНДАРЬ
+   ============================================ */
+
+QCalendarWidget {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+QCalendarWidget QToolButton {
+    color: #0C5DA5;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+QCalendarWidget QToolButton:hover {
+    background-color: #679FD2;
+}
+
+QCalendarWidget QToolButton:pressed {
+    background-color: #0C5DA5;
+}
+
+QCalendarWidget QMenu {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+}
+
+QCalendarWidget QWidget#qt_calendar_navigationbar {
+    background-color: #F5F7FA;
+    border-radius: 10px;
+}
+
+QCalendarWidget QSpinBox {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;
+    border-radius: 5px;
+    padding: 5px;
+    color: #043A6B;
+}
+
+/* ============================================
+   МОДАЛЬНЫЕ ОКНА (DIALOG)
+   ============================================ */
+
+QDialog {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+QDialog QLabel {
+    color: #043A6B;
+}
+
+/* ============================================
+   ГРУППЫ И РАМКИ
+   ============================================ */
+
+QGroupBox {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #043A6B;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 15px;
+    padding: 0 10px;
+    color: #0C5DA5;
+}
+
+/* ============================================
+   ТАБЛИЦЫ
+   ============================================ */
+
+QTableWidget {
+    background-color: #FFFFFF;
+    alternate-background-color: #FAFBFF;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    gridline-color: #E0E0E0;
+    selection-background-color: #408DD2;
+    selection-color: #FFFFFF;
+}
+
+QTableWidget::item {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+QTableWidget::item:hover {
+    background-color: #679FD2;
+}
+
+QTableWidget::item:selected {
+    background-color: #0C5DA5;
+}
+
+QHeaderView::section {
+    background-color: #0C5DA5;
+    color: #FFFFFF;
+    padding: 12px;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ============================================
+   ВКЛАДКИ (TAB)
+   ============================================ */
+
+QTabWidget::pane {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QTabBar::tab {
+    background-color: #F5F7FA;
+    color: #043A6B;
+    border: 2px solid #679FD2;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+QTabBar::tab:selected {
+    background-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    color: #0C5DA5;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #679FD2;
+}
+
+/* ============================================
+   ПУСТОЕ СОСТОЯНИЕ
+   ============================================ */
+
+QLabel#emptyLabel {
+    color: #043A6B;
+    font-size: 18px;
+    padding: 50px;
+    background-color: transparent;
+    qproperty-alignment: AlignCenter;
+}
+
+/* ============================================
+   ПОИСК
+   ============================================ */
+
+QLineEdit#searchInput {
+    background-color: #FFFFFF;
+    color: #043A6B;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    padding: 15px 15px 15px 45px;  
+    font-size: 16px;
+    min-height: 50px;
+    line-height: 20px;
+}
+
+QLineEdit#searchInput:hover {
+    border: 2px solid #408DD2;
+}
+
+QLineEdit#searchInput:focus {
+    border: 2px solid #0C5DA5;
+    background-color: #FAFBFF;
+}
+
+/* ============================================
+   СКРОЛЛ-ОБЛАСТЬ
+   ============================================ */
+
+QScrollArea {
+    background-color: transparent;
+    border: none;
+}
+
+QScrollArea > QWidget > QWidget {
+    background-color: transparent;
+}
+
+/* ============================================
+   СПИСКИ
+   ============================================ */
+
+QListWidget {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    padding: 5px;
+    selection-background-color: #408DD2;
+    selection-color: #FFFFFF;
+}
+
+QListWidget::item {
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+QListWidget::item:hover {
+    background-color: #679FD2;
+}
+
+QListWidget::item:selected {
+    background-color: #0C5DA5;
+}
+
+/* ============================================
+   ЧЕКБОКСЫ
+   ============================================ */
+
+QCheckBox {
+    color: #043A6B;
+    font-size: 14px;
+    spacing: 10px;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid #679FD2;
+    background-color: #FFFFFF;
+}
+
+QCheckBox::indicator:hover {
+    border: 2px solid #0C5DA5;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #00AC6B;
+    border: 2px solid #00AC6B;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #FFFFFF;
+}
+
+/* ============================================
+   РАДИО-КНОПКИ
+   ============================================ */
+
+QRadioButton {
+    color: #043A6B;
+    font-size: 14px;
+    spacing: 10px;
+}
+
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #679FD2;
+    background-color: #FFFFFF;
+}
+
+QRadioButton::indicator:hover {
+    border: 2px solid #0C5DA5;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #0C5DA5;
+    border: 2px solid #0C5DA5;
+}
+
+/* ============================================
+   СПИНБОКС (ЧИСЛОВОЙ ВВОД)
+   ============================================ */
+
+QSpinBox, QDoubleSpinBox {
+    background-color: #FFFFFF;
+    color: #043A6B;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    min-height: 45px;
+}
+
+QSpinBox:hover, QDoubleSpinBox:hover {
+    border: 2px solid #408DD2;
+}
+
+QSpinBox:focus, QDoubleSpinBox:focus {
+    border: 2px solid #0C5DA5;
+}
+
+QSpinBox::up-button, QDoubleSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 25px;
+    border-radius: 0 10px 0 0;
+    background-color: #679FD2;
+}
+
+QSpinBox::down-button, QDoubleSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 25px;
+    border-radius: 0 0 10px 0;
+    background-color: #679FD2;
+}
+
+QSpinBox::up-button:hover, QDoubleSpinBox::up-button:hover,
+QSpinBox::down-button:hover, QDoubleSpinBox::down-button:hover {
+    background-color: #0C5DA5;
+}
+
+/* ============================================
+   МЕНЮ
+   ============================================ */
+
+QMenu {
+    background-color: #FFFFFF;
+    border: 2px solid #679FD2;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QMenu::item {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 2px 5px;
+}
+
+QMenu::item:selected {
+    background-color: #0C5DA5;
+    color: #FFFFFF;
+}
+
+QMenu::separator {
+    height: 2px;
+    background-color: #679FD2;
+    margin: 5px 10px;
+}
+
+/* ============================================
+   TOOLTIP (ПОДСКАЗКИ)
+   ============================================ */
+
+QToolTip {
+    background-color: #043A6B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* ============================================
+   СЛАЙДЕР
+   ============================================ */
+
+QSlider::groove:horizontal {
+    background-color: #7773D9;
+    height: 8px;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background-color: #0C5DA5;
+    width: 20px;
+    height: 20px;
+    margin: -6px 0;
+    border-radius: 10px;
+}
+
+QSlider::handle:horizontal:hover {
+    background-color: #26537C;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: #1F1AB2;
+    border-radius: 4px;
+}
